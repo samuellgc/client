@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   Calendar,
   Users,
-  DollarSign,
   LayoutDashboard,
   ChevronLeft,
   LogOut,
@@ -16,7 +15,6 @@ const menuItems = [
   { icon: LayoutDashboard, name: "Dashboard", href: "/dashboard" },
   { icon: Calendar, name: "Agendamentos", href: "/agendamentos" },
   { icon: Users, name: "Clientes", href: "/clientes" },
-  { icon: DollarSign, name: "Receitas", href: "/receitas" },
 ];
 
 export default function Sidebar() {

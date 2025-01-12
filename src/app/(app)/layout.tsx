@@ -1,6 +1,8 @@
 "use client";
 
 import Sidebar from "@/shared/components/Sidebar";
+import { BellIcon, UserIcon } from "lucide-react";
+import Link from "next/link";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,17 +15,22 @@ export default function Layout({ children }: LayoutProps) {
 
       <div className="flex-1 flex flex-col">
         <header className="bg-white shadow-md p-4">
-          <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-xl font-semibold text-blue-600">
-              Agendamentos
-            </h1>
+          <div className="container mx-auto flex justify-end items-center">
             <div className="flex space-x-4">
-              <button className="text-blue-600 hover:text-blue-800 transition">
-                Notificações
-              </button>
-              <button className="text-blue-600 hover:text-blue-800 transition">
-                Perfil
-              </button>
+              <Link
+                title="Notificações"
+                href="/notificacoes"
+                className="text-blue-600 hover:text-blue-800 transition"
+              >
+                <BellIcon />
+              </Link>
+              <Link
+                href="/perfil"
+                title="Perfil"
+                className="text-blue-600 hover:text-blue-800 transition"
+              >
+                <UserIcon />
+              </Link>
             </div>
           </div>
         </header>
